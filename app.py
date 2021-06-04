@@ -24,7 +24,7 @@ def que():
  
     print(data)
     print(type(data))
-    x=open("que.txt",'a')
+    x=open("plque.txt",'w')
     print(data,file=x)
     x.close()
     data = json.dumps(data)
