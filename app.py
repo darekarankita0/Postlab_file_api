@@ -24,7 +24,7 @@ def que():
  
     print(data)
     print(type(data))
-    x=open("https://github.com/darekarankita0/Postlab_file_api/blob/main/plque.txt",'w')
+    x=open("plque.txt",'w')
     print(data,file=x)
     x.close()
     data = json.dumps(data)
