@@ -24,7 +24,7 @@ def que():
  
     print(data)
     print(type(data))
-    x=open(url_for('static',filename='plque.txt'),'w')
+    x=open(url_for('static',filename='que.txt'),'w')
     #url_for('static',filename='plque.txt')
     print(data,file=x)
     x.close()
