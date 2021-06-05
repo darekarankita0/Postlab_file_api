@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 
 from flask import Flask, render_template, request, jsonify
 #from flask_cors import CORS, cross_origin
@@ -24,22 +19,16 @@ def que():
  
     print(data)
     print(type(data))
-    x=open(url_for('static',filename='que.txt'),'w')
-    #url_for('static',filename='plque.txt')
+    x=open("static\plque.txt",'w')
     print(data,file=x)
     x.close()
     data = json.dumps(data)
     return jsonify(data)
 @app.route('/file', methods=['GET','POST'])
 def file():
-    
-    res = requests.get("https://powerful-island-81116.herokuapp.com/")
+    with open(url_for('static',filename='plque.txt'),'w') as f:
+        content = x.read()
+    return f"<h1>{content}</h1>"
+
 if __name__=='__main__':
     app.run(debug=False)
-
-
-# In[ ]:
-
-
-
-
