@@ -30,7 +30,10 @@ def que():
     x.close()
     data = json.dumps(data)
     return jsonify(data)
-
+@app.route('/file', methods=['GET','POST'])
+def file():
+    
+    res = requests.get("https://powerful-island-81116.herokuapp.com/")
 if __name__=='__main__':
     app.run(debug=False)
 
