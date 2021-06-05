@@ -24,10 +24,10 @@ def que():
  
     print(data)
     print(type(data))
-    #x=open("plque.txt",'w')
-    url_for('static',filename='plque.txt')
-    #print(data,file=x)
-    #x.close()
+    x=open(url_for('static',filename='plque.txt'),'w')
+    #url_for('static',filename='plque.txt')
+    print(data,file=x)
+    x.close()
     data = json.dumps(data)
     return jsonify(data)
 
