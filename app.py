@@ -24,11 +24,11 @@ def que():
     x.close()
     data = json.dumps(data)
     return jsonify(data)
-@app.route('/file', methods=['GET','POST'])
+'''@app.route('/file', methods=['GET','POST'])
 def file():
     with open(url_for('static',filename='plque.txt'),'w') as f:
         content = x.read()
-    return f"<h1>{content}</h1>"
+    return f"<h1>{content}</h1>"'''
 
 if __name__=='__main__':
     app.run(debug=False)
